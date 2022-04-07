@@ -6,21 +6,31 @@
 
 "use strict";
 
-function myButtonClicked () {
-  // this function displays "My Text for Button!"
-  
-  document.getElementById('hello-world').innerHTML = 'Hello there! Welcome to Asia! We are the largest and most populated continent in the WORLD. There are millions of places where you can come and travel here, as we have 48 different countries!'
-}
-
 function calculate () {
+  
   // input
-  let base = parseInt(document.getElementById('base-of-triangle').value)
-  let height = parseInt(document.getElementById('height-of-triangle').value)
+  let width = parseInt(document.getElementById('width').value)
+  let length = parseInt(document.getElementById('length').value)
+  let height = parseInt(document.getElementById('height').value)
   
   // process
-  let area = base * height/2
-  let perimeter = (base * height)/2
+  let surfaceArea = 2*(width * length + height * length + height  * width)
   
   // output
-  document.getElementById('area').innerHTML = 'The area of the triangle is: ' + area + ' cm²'
+  document.getElementById('surface-area').innerHTML = 'The surface area of the rectangular prism is: ' + surfaceArea + ' cm²'
+}
+
+ // Volume process for user input
+function calculateVolume () {
+  
+  // input
+  let widthVolume = parseInt(document.getElementById('width-volume').value)
+  let lengthVolume = parseInt(document.getElementById('length-volume').value)
+  let heightVolume = parseInt(document.getElementById('height-volume').value)
+  
+  // process
+  let rectangularPrismVolume = (widthVolume * lengthVolume * heightVolume)
+  
+  // output
+  document.getElementById('volume').innerHTML = 'The volume of the rectangular prism is ' + rectangularPrismVolume + ' cm<sup>3</sup>'
 }

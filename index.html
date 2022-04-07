@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png" />
-    <link rel="manifest" href="./fav/site.webmanifest" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
 
     <!-- MDL Stylesheet -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -36,9 +36,6 @@
         </div>
       </header>
       <main class="mdl-layout__content">
-        
-
-            
 
               <!--Formula for area of triangle-->
               <center><h3>Surface Area for Rectangular Prisim</h3></center>
@@ -46,15 +43,14 @@
         <!--Image of Rectangular Prism-->
               <center><img src="./images/Surface-area-rectangular-prism.jpg" alt="Triangle" width="45%" height="auto"/></center>
         
-        <h3>SA=2(wl+hl+hw)</h3>
-
+        <center><h3>SA=2(wl+hl+hw)</h3></center>
 
         <!-- Numeric Textfield with Floating Label -->
         <center>
           <form action="#">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-triangle">
-            <label class="mdl-textfield__label" for="height-of-triangle">Height...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width">
+            <label class="mdl-textfield__label" for="width">Width...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -64,8 +60,19 @@
         <center>
           <form action="#">
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-triangle">
-            <label class="mdl-textfield__label" for="height-of-triangle">Height...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length">
+            <label class="mdl-textfield__label" for="length">Length...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+      </center>
+
+        <!-- Numeric Textfield with Floating Label -->
+        <center>
+          <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height">
+            <label class="mdl-textfield__label" for="height">Height...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
@@ -81,9 +88,65 @@
         <br />
         <center><p>
           <div id="answers">
-            <div id="area"></div>
+            <div id="surface-area"></div>
           </div>
         </p></center>
+
+        <!-- Text for volume of rectangular prism -->
+              <center><h3>Volume for Rectangular Prisim</h3></center>
+
+        <!--Image of Rectangular Prism-->
+              <center><img src="./images/Surface-area-rectangular-prism.jpg" alt="Triangle" width="45%" height="auto"/></center>
+        
+        <center><h3>V = l x w x h</h3></center>
+
+        <!-- Numeric Textfield with Floating Label -->
+        <center>
+          <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="width-volume">
+            <label class="mdl-textfield__label" for="width-volume">Width...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+      </center>
+				
+        <!-- Numeric Textfield with Floating Label -->
+        <center>
+          <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length-volume">
+            <label class="mdl-textfield__label" for="length-volume">Length...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+      </center>
+
+        <!-- Numeric Textfield with Floating Label -->
+        <center>
+          <form action="#">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-volume">
+            <label class="mdl-textfield__label" for="height-volume">Height...</label>
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
+      </center>
+
+        <!-- Raised button with ripple -->
+        <center><button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="calculateVolume()"
+        >
+          Calculate
+        </button></center>
+        <br />
+        <center><p>
+          <div id="volumeAnswers">
+            <div id="volume"></div>
+          </div>
+        </p></center>
+        
       </main>
     </div>
   </body>
